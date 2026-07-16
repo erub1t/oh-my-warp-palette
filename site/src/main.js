@@ -26,7 +26,7 @@ async function loadThemes() {
   const themes = [];
   for (const file of THEME_FILES) {
     try {
-      const res = await fetch(`/themes/${file}`);
+      const res = await fetch(`${import.meta.env.BASE_URL}themes/${file}`);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const text = await res.text();
       const data = yaml.load(text) || {};
