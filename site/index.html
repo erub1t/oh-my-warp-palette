@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>oh-my-warp-palette</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <header>
+    <div class="patchwork"></div>
+    <div class="pixel-grid"></div>
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-tag pixel">v1.0.1</span>
+        <h1>oh-my-warp-palette</h1>
+        <div class="subtitle">Warp 终端主题仓库</div>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+        <svg id="themeIcon" viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zM2 13h2a1 1 0 100-2H2a1 1 0 100 2zm18 0h2a1 1 0 100-2h-2a1 1 0 100 2zM11 2v2a1 1 0 102 0V2a1 1 0 10-2 0zm0 18v2a1 1 0 102 0v-2a1 1 0 10-2 0zM5.99 4.58a1 1 0 10-1.41 1.41l1.41 1.41a1 1 0 101.41-1.41L5.99 4.58zm12.37 12.37a1 1 0 10-1.41 1.41l1.41 1.41a1 1 0 101.41-1.41l-1.41-1.41zm1.41-10.96a1 1 0 10-1.41-1.41l-1.41 1.41a1 1 0 101.41 1.41l1.41-1.41zM7.4 18.02a1 1 0 10-1.41-1.41l-1.41 1.41a1 1 0 101.41 1.41l1.41-1.41z"/></svg>
+        <span id="themeLabel">LIGHT MODE</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="intro-card">
+        <div class="intro-text">
+          <h2 class="pixel">一键安装 · 实时预览</h2>
+          <p>为 Warp 终端打造的配色主题集合。在下方选择喜欢的主题，复制配置或直接使用脚本安装到本地。</p>
+        </div>
+        <div class="intro-actions">
+          <a class="btn" href="https://github.com/erub1t/oh-my-warp-palette" target="_blank" rel="noopener">
+            <span class="pixel">GITHUB</span>
+          </a>
+          <a class="btn btn-secondary" href="#themes">
+            <span class="pixel">预览主题</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="themes">
+      <div class="section-header">
+        <h2 class="section-title pixel">THEME PREVIEW</h2>
+        <span class="theme-count pixel" id="themeCount">LOADING...</span>
+      </div>
+      <div class="theme-grid" id="themeGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>MIT License · <a href="https://github.com/erub1t/oh-my-warp-palette" target="_blank" rel="noopener">erub1t/oh-my-warp-palette</a></p>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

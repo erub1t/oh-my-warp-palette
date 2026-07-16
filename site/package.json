@@ -1,0 +1,18 @@
+{
+  "name": "oh-my-warp-palette-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "sync:themes": "node scripts/sync-themes.js",
+    "dev": "npm run sync:themes && vite",
+    "build": "npm run sync:themes && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.3.0"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}
