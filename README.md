@@ -49,6 +49,31 @@ irm https://raw.githubusercontent.com/erub1t/oh-my-warp-palette/main/install.ps1
 
 安装完成后，打开 **Warp** → **Settings** → **Appearance** → **Theme**，选择已安装的主题。
 
+## 更新主题
+
+当仓库中的主题有更新时，可以重新下载覆盖本地已安装的主题。
+
+### macOS / Linux
+
+```bash
+# 更新所有主题
+curl -fsSL https://raw.githubusercontent.com/erub1t/oh-my-warp-palette/main/install.sh | bash -s -- --update
+
+# 更新指定主题
+curl -fsSL https://raw.githubusercontent.com/erub1t/oh-my-warp-palette/main/install.sh | bash -s -- --update github-dark
+```
+
+### Windows
+
+```powershell
+# 更新所有主题
+irm https://raw.githubusercontent.com/erub1t/oh-my-warp-palette/main/install.ps1 -OutFile install.ps1
+.\install.ps1 -Update
+
+# 更新指定主题
+.\install.ps1 -Update github-dark
+```
+
 ## 卸载主题
 
 ### macOS / Linux
