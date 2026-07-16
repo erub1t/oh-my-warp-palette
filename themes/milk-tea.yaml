@@ -1,0 +1,25 @@
+name: "Milk Tea"
+accent: "#b07d52"
+background: "#faf6f0"
+foreground: "#5c4d42"
+details: lighter
+cursor: "#b07d52"
+terminal_colors:
+  normal:
+    black: "#4a4039"
+    red: "#b55858"
+    green: "#6b8e5a"
+    yellow: "#b8955e"
+    blue: "#5b7b9c"
+    magenta: "#9b6b8a"
+    cyan: "#5a8f86"
+    white: "#9e9084"
+  bright:
+    black: "#6e6259"
+    red: "#c97171"
+    green: "#82a66e"
+    yellow: "#c9a873"
+    blue: "#7293b3"
+    magenta: "#b0819d"
+    cyan: "#72a8a0"
+    white: "#f0e6dd"

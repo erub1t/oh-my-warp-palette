@@ -25,9 +25,14 @@ NC='\033[0m'
 
 BUILTIN_THEMES=(
   april
+  cocoa-cream
   github-dark
   github-dark-dimmed
   github-light
+  milk-tea
+  muted-forest
+  pastel-dawn
+  twilight-slate
 )
 
 usage() {

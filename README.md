@@ -7,9 +7,14 @@
 | 主题 | 描述 | 背景色 | 前景色 | 强调色 | 配置文件 |
 |------|------|--------|--------|--------|----------|
 | **April** | 清新的春日配色 | `#ffffff` | `#17703f` | `#5DA802` | [april.yaml](themes/april.yaml) |
-| **GitHub Light** | 基于 GitHub 官方浅色配色（Colorblind 版本） | `#ffffff` | `#1f2328` | `#0969da` | [github-light.yaml](themes/github-light.yaml) |
+| **Cocoa Cream** | 暖棕可可，柔和舒适的深色主题 | `#2b2624` | `#d6cfc8` | `#c8966d` | [cocoa-cream.yaml](themes/cocoa-cream.yaml) |
 | **GitHub Dark** | 基于 GitHub 官方深色配色 | `#0d1117` | `#c9d1d9` | `#58a6ff` | [github-dark.yaml](themes/github-dark.yaml) |
 | **GitHub Dark Dimmed** | GitHub 深色主题的柔和版本 | `#22272e` | `#adbac7` | `#539bf5` | [github-dark-dimmed.yaml](themes/github-dark-dimmed.yaml) |
+| **GitHub Light** | 基于 GitHub 官方浅色配色（Colorblind 版本） | `#ffffff` | `#1f2328` | `#0969da` | [github-light.yaml](themes/github-light.yaml) |
+| **Milk Tea** | 奶茶暖调，柔和易读的浅色主题 | `#faf6f0` | `#5c4d42` | `#b07d52` | [milk-tea.yaml](themes/milk-tea.yaml) |
+| **Muted Forest** | 低饱和森林绿，护眼的深色主题 | `#232b28` | `#c5cbc4` | `#7da585` | [muted-forest.yaml](themes/muted-forest.yaml) |
+| **Pastel Dawn** | 粉紫粉蓝渐变感，清新的浅色主题 | `#f7f4f9` | `#4a4458` | `#8b7ab8` | [pastel-dawn.yaml](themes/pastel-dawn.yaml) |
+| **Twilight Slate** | 暮光蓝灰，沉稳柔和的深色主题 | `#252a33` | `#c9cdd4` | `#7a9bc4` | [twilight-slate.yaml](themes/twilight-slate.yaml) |
 
 ## npm CLI 安装（推荐跨平台）
 

@@ -1,0 +1,25 @@
+name: "Muted Forest"
+accent: "#7da585"
+background: "#232b28"
+foreground: "#c5cbc4"
+details: darker
+cursor: "#7da585"
+terminal_colors:
+  normal:
+    black: "#2f3a35"
+    red: "#c57d7d"
+    green: "#7da585"
+    yellow: "#c4b07a"
+    blue: "#7b9ab0"
+    magenta: "#a98fa8"
+    cyan: "#6fa898"
+    white: "#a8b0a8"
+  bright:
+    black: "#4a574f"
+    red: "#d39393"
+    green: "#94bb9c"
+    yellow: "#d6c28f"
+    blue: "#94b1c6"
+    magenta: "#bfa4be"
+    cyan: "#86beb0"
+    white: "#e3e6e2"

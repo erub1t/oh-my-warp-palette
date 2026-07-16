@@ -1,0 +1,25 @@
+name: "Pastel Dawn"
+accent: "#8b7ab8"
+background: "#f7f4f9"
+foreground: "#4a4458"
+details: lighter
+cursor: "#8b7ab8"
+terminal_colors:
+  normal:
+    black: "#4a4458"
+    red: "#c4707a"
+    green: "#6a9b7c"
+    yellow: "#b89b6a"
+    blue: "#6f85c3"
+    magenta: "#a673a8"
+    cyan: "#5f9aa8"
+    white: "#a69eb0"
+  bright:
+    black: "#6c657a"
+    red: "#d4858d"
+    green: "#80b090"
+    yellow: "#c9af7d"
+    blue: "#879cd3"
+    magenta: "#b989bb"
+    cyan: "#77aeb9"
+    white: "#efeaf2"
