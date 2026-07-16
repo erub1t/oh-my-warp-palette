@@ -1,0 +1,25 @@
+name: "GitHub Light"
+accent: "#0969da"
+background: "#ffffff"
+foreground: "#1f2328"
+details: lighter
+cursor: "#0969da"
+terminal_colors:
+  normal:
+    black: "#24292f"
+    red: "#a04100"
+    green: "#0969da"
+    yellow: "#4d2d00"
+    blue: "#0969da"
+    magenta: "#8250df"
+    cyan: "#1b7c83"
+    white: "#6e7781"
+  bright:
+    black: "#32383f"
+    red: "#bc4c00"
+    green: "#218bff"
+    yellow: "#633c01"
+    blue: "#218bff"
+    magenta: "#a475f9"
+    cyan: "#3192aa"
+    white: "#ffffff"

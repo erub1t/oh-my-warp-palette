@@ -1,0 +1,25 @@
+name: "Twilight Slate"
+accent: "#7a9bc4"
+background: "#252a33"
+foreground: "#c9cdd4"
+details: darker
+cursor: "#7a9bc4"
+terminal_colors:
+  normal:
+    black: "#313742"
+    red: "#c87c7c"
+    green: "#7fb38a"
+    yellow: "#c9b07a"
+    blue: "#7a9bc4"
+    magenta: "#a98eb8"
+    cyan: "#6ba8b8"
+    white: "#9da3ad"
+  bright:
+    black: "#4c5360"
+    red: "#d79393"
+    green: "#97c9a1"
+    yellow: "#d9c290"
+    blue: "#94b2d4"
+    magenta: "#bfa4cd"
+    cyan: "#82bdcc"
+    white: "#e8eaed"

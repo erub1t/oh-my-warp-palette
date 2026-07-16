@@ -1,0 +1,25 @@
+name: "Cocoa Cream"
+accent: "#c8966d"
+background: "#2b2624"
+foreground: "#d6cfc8"
+details: darker
+cursor: "#c8966d"
+terminal_colors:
+  normal:
+    black: "#3b342f"
+    red: "#c27c7c"
+    green: "#8da87a"
+    yellow: "#c9a86a"
+    blue: "#7d94b0"
+    magenta: "#a9899b"
+    cyan: "#6fa89c"
+    white: "#a69e96"
+  bright:
+    black: "#564d47"
+    red: "#d39393"
+    green: "#a3be91"
+    yellow: "#d8bc85"
+    blue: "#95abc4"
+    magenta: "#bfa1b0"
+    cyan: "#86beb2"
+    white: "#eeeae6"
