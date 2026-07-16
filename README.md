@@ -2,6 +2,8 @@
 
 [Warp](https://www.warp.dev/) 终端自定义主题仓库。
 
+> 在线预览：进入 [`site/`](site/) 目录，执行 `npm install && npm run dev`，浏览器访问 Vite 输出的地址即可查看所有主题配色与终端效果。
+
 ## 主题列表
 
 | 主题 | 描述 | 背景色 | 前景色 | 强调色 | 配置文件 |
@@ -69,6 +71,8 @@ irm https://raw.githubusercontent.com/erub1t/oh-my-warp-palette/main/install.ps1
 > powershell -ExecutionPolicy Bypass -File .\install.ps1 github-dark
 > ```
 
+> Windows 下主题安装到 `%APPDATA%\warp\Warp\data\themes`，macOS / Linux 下为 `~/.warp/themes`。
+
 安装完成后，打开 **Warp** → **Settings** → **Appearance** → **Theme**，选择已安装的主题。
 
 ## 卸载主题
@@ -90,7 +94,7 @@ irm https://raw.githubusercontent.com/erub1t/oh-my-warp-palette/main/install.ps1
 ## 添加新主题
 
 1. 在 `themes/` 目录下新建一个 `.yaml` 主题文件。
-2. 将主题名称添加到 `install.sh` 中的 `BUILTIN_THEMES` 数组。
+2. 将主题名称添加到 `install.sh` 的 `BUILTIN_THEMES` 数组和 `install.ps1` 的 `$BuiltinThemes` 列表。
 3. 参考 [Warp 主题规范](https://docs.warp.dev/appearance/custom-themes) 编写配置。
 4. 提交 pull request。
 

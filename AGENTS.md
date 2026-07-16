@@ -73,7 +73,7 @@ curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/oh-my-warp-palette/ma
 
 ### 环境变量
 
-- `WARP_THEMES_DIR`：目标主题目录，默认 `~/.warp/themes`。
+- `WARP_THEMES_DIR`：目标主题目录，默认 `~/.warp/themes`（Windows 下为 `%APPDATA%\warp\Warp\data\themes`）。
 - `REMOTE_REPO`：覆盖远程仓库地址，格式 `用户名/仓库名`。
 
 ## 构建与测试命令
@@ -146,7 +146,7 @@ WARP_THEMES_DIR=/tmp/warp-test ./install.sh --uninstall github-light
 
 1. 在 `themes/` 下新建 `<theme-name>.yaml`。
 2. 参考 [Warp 主题规范](https://docs.warp.dev/appearance/custom-themes) 编写配置。
-3. 在 `install.sh` 的 `BUILTIN_THEMES` 数组末尾追加主题名称（与文件名一致，不含 `.yaml` 后缀）。
+3. 在 `install.sh` 的 `BUILTIN_THEMES` 数组和 `install.ps1` 的 `$BuiltinThemes` 列表末尾追加主题名称（与文件名一致，不含 `.yaml` 后缀）。
 4. 在 `README.md` 的主题列表中补充新主题说明。
 5. 使用临时 `WARP_THEMES_DIR` 运行安装脚本验证新主题可被正确安装。
 6. npm CLI 会通过读取 `themes/` 目录自动发现新主题，无需在 `package.json` 或 CLI 代码中额外维护清单。

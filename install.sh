@@ -8,7 +8,17 @@ else
   SCRIPT_DIR="$(pwd)"
 fi
 LOCAL_THEMES_DIR="$SCRIPT_DIR/themes"
-WARP_THEMES_DIR="${WARP_THEMES_DIR:-$HOME/.warp/themes}"
+# Windows（Git Bash/MSYS）下 Warp 主题目录与 macOS/Linux 不同
+if [[ -z "${WARP_THEMES_DIR:-}" ]]; then
+  case "${OSTYPE:-}" in
+    msys*|cygwin*|win32*)
+      WARP_THEMES_DIR="${APPDATA:-$HOME/AppData/Roaming}/warp/Warp/data/themes"
+      ;;
+    *)
+      WARP_THEMES_DIR="$HOME/.warp/themes"
+      ;;
+  esac
+fi
 
 # Remote repository used when the script is executed via curl | bash.
 # Format: "github-username/repo-name"
@@ -54,7 +64,8 @@ Options:
 Environment variables:
   REMOTE_REPO     Override the GitHub repo to download from (default is set in script)
                   Example: REMOTE_REPO=yourname/oh-my-warp-palette
-  WARP_THEMES_DIR Destination directory (default: ~/.warp/themes)
+  WARP_THEMES_DIR Destination directory (default: ~/.warp/themes;
+                  %APPDATA%\warp\Warp\data\themes on Windows)
 
 Examples:
   $(basename "$0")                              # Install all themes locally

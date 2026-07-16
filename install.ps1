@@ -11,13 +11,24 @@ param(
 
 $Repo = "erub1t/oh-my-warp-palette"
 $Branch = "main"
-$WarpThemesDir = Join-Path $env:USERPROFILE ".warp" "themes"
+
+# Windows 下 Warp 主题目录与 macOS/Linux（~/.warp/themes）不同
+if ($env:WARP_THEMES_DIR) {
+    $WarpThemesDir = $env:WARP_THEMES_DIR
+} else {
+    $WarpThemesDir = Join-Path $env:APPDATA "warp\Warp\data\themes"
+}
 
 $BuiltinThemes = @(
     "april",
+    "cocoa-cream",
     "github-dark",
     "github-dark-dimmed",
-    "github-light"
+    "github-light",
+    "milk-tea",
+    "muted-forest",
+    "pastel-dawn",
+    "twilight-slate"
 )
 
 function Show-Help {
@@ -30,6 +41,9 @@ Options:
   -List        List available themes
   -Uninstall   Remove installed themes
   -Help        Show this help message
+
+Environment variables:
+  WARP_THEMES_DIR  Destination directory (default: %APPDATA%\warp\Warp\data\themes)
 
 Examples:
   .\install.ps1                  # Install all themes

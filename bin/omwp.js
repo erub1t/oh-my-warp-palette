@@ -14,7 +14,17 @@ const COLORS = {
 
 const PKG_ROOT = path.resolve(__dirname, '..');
 const THEMES_DIR = path.join(PKG_ROOT, 'themes');
-const WARP_THEMES_DIR = process.env.WARP_THEMES_DIR || path.join(os.homedir(), '.warp', 'themes');
+
+function defaultWarpThemesDir() {
+  if (process.platform === 'win32') {
+    // Windows 下 Warp 主题目录与 macOS/Linux（~/.warp/themes）不同
+    const appData = process.env.APPDATA || path.join(os.homedir(), 'AppData', 'Roaming');
+    return path.join(appData, 'warp', 'Warp', 'data', 'themes');
+  }
+  return path.join(os.homedir(), '.warp', 'themes');
+}
+
+const WARP_THEMES_DIR = process.env.WARP_THEMES_DIR || defaultWarpThemesDir();
 
 function log(color, message) {
   console.log(`${COLORS[color] || ''}${message}${COLORS.reset}`);
@@ -54,7 +64,8 @@ Aliases:
   -h, --help           Show this help message
 
 Environment variables:
-  WARP_THEMES_DIR      Destination directory (default: ~/.warp/themes)
+  WARP_THEMES_DIR      Destination directory (default: ~/.warp/themes;
+                       %APPDATA%\\warp\\Warp\\data\\themes on Windows)
 
 Examples:
   npx omwp install                    # Install all themes
