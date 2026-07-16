@@ -10,31 +10,56 @@
 
 ## 安装
 
+### macOS / Linux
+
 在终端执行以下命令即可一键安装所有主题：
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.sh | bash
 ```
 
-安装完成后，打开 **Warp** → **设置** → **外观** → **主题**，选择已安装的主题。
-
-## 安装指定主题
-
-只安装某个主题时，需要在命令末尾加上主题名：
+只安装某个主题：
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.sh | bash -s -- github-dark
 ```
 
-> `bash -s -- github-dark` 是因为脚本通过管道传入 bash 执行，`-s` 表示从标准输入读取脚本，`--` 后面的参数会传给脚本。
+### Windows
+
+在 **PowerShell** 中执行：
+
+```powershell
+irm https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.ps1 | iex
+```
+
+只安装某个主题：
+
+```powershell
+irm https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.ps1 -OutFile install.ps1
+.\install.ps1 github-dark
+```
+
+> 如果执行策略限制脚本运行，可加上 `-ExecutionPolicy Bypass`：
+> ```powershell
+> powershell -ExecutionPolicy Bypass -File .\install.ps1 github-dark
+> ```
+
+安装完成后，打开 **Warp** → **Settings** → **Appearance** → **Theme**，选择已安装的主题。
 
 ## 卸载主题
 
-如需卸载某个主题，可先用 `curl` 下载脚本，再执行卸载：
+### macOS / Linux
 
 ```bash
 curl -fsSL -o /tmp/oh-my-warp-palette-install.sh https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.sh
 bash /tmp/oh-my-warp-palette-install.sh --uninstall github-light
+```
+
+### Windows
+
+```powershell
+irm https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.ps1 -OutFile install.ps1
+.\install.ps1 -Uninstall github-light
 ```
 
 ## 添加新主题
