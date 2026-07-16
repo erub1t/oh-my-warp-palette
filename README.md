@@ -11,6 +11,21 @@
 | **GitHub Dark** | 基于 GitHub 官方深色配色 | `#0d1117` | `#c9d1d9` | `#58a6ff` | [github-dark.yaml](themes/github-dark.yaml) |
 | **GitHub Dark Dimmed** | GitHub 深色主题的柔和版本 | `#22272e` | `#adbac7` | `#539bf5` | [github-dark-dimmed.yaml](themes/github-dark-dimmed.yaml) |
 
+## npm CLI 安装（推荐跨平台）
+
+如果你已安装 Node.js，可以直接使用 npx 运行，无需下载脚本：
+
+```bash
+npx --registry=https://registry.npmjs.org omwpcli install                 # 安装所有主题
+npx --registry=https://registry.npmjs.org omwpcli install github-dark     # 仅安装指定主题
+npx --registry=https://registry.npmjs.org omwpcli update github-dark      # 更新指定主题
+npx --registry=https://registry.npmjs.org omwpcli uninstall github-light  # 卸载指定主题
+npx --registry=https://registry.npmjs.org omwpcli list                    # 列出所有可用主题
+npx --registry=https://registry.npmjs.org omwpcli help                    # 查看帮助
+```
+
+> 重复执行 `install` 或 `update` 会覆盖本地同名文件，因此也用于更新到最新版本。
+
 ## 安装
 
 安装时会直接覆盖本地同名的主题文件，因此重复执行即可更新到最新版本。

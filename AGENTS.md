@@ -4,16 +4,21 @@
 
 ## 项目概览
 
-这是一个 [Warp](https://www.warp.dev/) 终端自定义主题仓库，仓库内仅包含主题定义文件与一个 Bash 安装脚本。
+这是一个 [Warp](https://www.warp.dev/) 终端自定义主题仓库，主要包含主题定义文件、一个 Bash 安装脚本，以及一个可选的 npm CLI。
 
 - **功能**：提供若干基于 GitHub 官方配色的 Warp 终端主题，并通过脚本一键安装到 Warp 的主题目录。
-- **技术栈**：纯静态 YAML 文件 + Bash 脚本，无构建工具、无运行时依赖、无包管理器（无 `pyproject.toml`、`package.json`、`Cargo.toml` 等）。
+- **技术栈**：纯静态 YAML 文件 + Bash 脚本；同时提供一个可选的 npm CLI（`omwp`），作为 Bash/PowerShell 安装方式的补充，方便已安装 Node.js 的用户跨平台使用。
 - **仓库结构**：
   ```
   .
   ├── README.md          # 面向用户的中文说明文档
   ├── install.sh         # 主题安装/卸载/列出的 Bash 脚本
+  ├── install.ps1        # Windows PowerShell 安装脚本
+  ├── package.json       # npm 包配置
+  ├── bin/
+  │   └── omwp.js        # npm CLI 入口
   └── themes/
+      ├── april.yaml
       ├── github-dark.yaml
       ├── github-dark-dimmed.yaml
       └── github-light.yaml
@@ -144,3 +149,4 @@ WARP_THEMES_DIR=/tmp/warp-test ./install.sh --uninstall github-light
 3. 在 `install.sh` 的 `BUILTIN_THEMES` 数组末尾追加主题名称（与文件名一致，不含 `.yaml` 后缀）。
 4. 在 `README.md` 的主题列表中补充新主题说明。
 5. 使用临时 `WARP_THEMES_DIR` 运行安装脚本验证新主题可被正确安装。
+6. npm CLI 会通过读取 `themes/` 目录自动发现新主题，无需在 `package.json` 或 CLI 代码中额外维护清单。
