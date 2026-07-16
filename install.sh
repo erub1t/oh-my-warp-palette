@@ -24,6 +24,7 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 BUILTIN_THEMES=(
+  april
   github-dark
   github-dark-dimmed
   github-light

@@ -1,0 +1,25 @@
+name: April
+accent: "#5DA802"
+background: "#ffffff"
+foreground: "#17703f"
+details: lighter
+cursor: "#5DA802"
+terminal_colors:
+  normal:
+    black: "#1A1F1C"
+    red: "#B23B3B"
+    green: "#5DA802"
+    yellow: "#B88A3A"
+    blue: "#3D87C8"
+    magenta: "#9B5AAB"
+    cyan: "#3F9B85"
+    white: "#8cbaa5"
+  bright:
+    black: "#3D4B44"
+    red: "#D04A3D"
+    green: "#7CB342"
+    yellow: "#D89B47"
+    blue: "#5AA3D6"
+    magenta: "#A67ABF"
+    cyan: "#5BB8A0"
+    white: "#2A332E"

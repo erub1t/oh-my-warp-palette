@@ -4,6 +4,7 @@
 
 ## 主题列表
 
+- **April** — 清新的春日配色。
 - **GitHub Light** — 基于 GitHub 官方浅色配色。
 - **GitHub Dark** — 基于 GitHub 官方深色配色。
 - **GitHub Dark Dimmed** — GitHub 深色主题的柔和版本。

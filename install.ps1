@@ -14,6 +14,7 @@ $Branch = "main"
 $WarpThemesDir = Join-Path $env:USERPROFILE ".warp" "themes"
 
 $BuiltinThemes = @(
+    "april",
     "github-dark",
     "github-dark-dimmed",
     "github-light"
