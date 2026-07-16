@@ -9,7 +9,7 @@ param(
     [switch]$Help
 )
 
-$Repo = "eruship/oh-my-warp-palette"
+$Repo = "erub1t/oh-my-warp-palette"
 $Branch = "main"
 $WarpThemesDir = Join-Path $env:USERPROFILE ".warp" "themes"
 
@@ -38,10 +38,10 @@ Examples:
   .\install.ps1 -Uninstall github-light  # Uninstall github-light
 
 Remote install (PowerShell):
-  irm https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.ps1 | iex
+  irm https://raw.githubusercontent.com/erub1t/oh-my-warp-palette/main/install.ps1 | iex
 
 Remote install single theme:
-  irm https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.ps1 -OutFile install.ps1
+  irm https://raw.githubusercontent.com/erub1t/oh-my-warp-palette/main/install.ps1 -OutFile install.ps1
   .\install.ps1 github-dark
 "@
 }

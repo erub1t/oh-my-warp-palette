@@ -13,7 +13,7 @@ WARP_THEMES_DIR="${WARP_THEMES_DIR:-$HOME/.warp/themes}"
 # Remote repository used when the script is executed via curl | bash.
 # Format: "github-username/repo-name"
 PLACEHOLDER_REPO="your-username/oh-my-warp-palette"
-DEFAULT_REMOTE_REPO="eruship/oh-my-warp-palette"
+DEFAULT_REMOTE_REPO="erub1t/oh-my-warp-palette"
 REMOTE_REPO="${REMOTE_REPO:-$DEFAULT_REMOTE_REPO}"
 force_remote=false
 
@@ -60,10 +60,10 @@ Examples:
   $(basename "$0") -u github-light              # Uninstall github-light
 
 Remote install (after pushing to GitHub):
-  curl -fsSL https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.sh | bash
+  curl -fsSL https://raw.githubusercontent.com/erub1t/oh-my-warp-palette/main/install.sh | bash
 
 Remote install single theme:
-  curl -fsSL https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.sh | bash -s -- github-dark
+  curl -fsSL https://raw.githubusercontent.com/erub1t/oh-my-warp-palette/main/install.sh | bash -s -- github-dark
 EOF
 }
 

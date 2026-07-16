@@ -18,13 +18,13 @@
 在终端执行以下命令即可一键安装所有主题：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/erub1t/oh-my-warp-palette/main/install.sh | bash
 ```
 
 只安装某个主题：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.sh | bash -s -- github-dark
+curl -fsSL https://raw.githubusercontent.com/erub1t/oh-my-warp-palette/main/install.sh | bash -s -- github-dark
 ```
 
 ### Windows
@@ -32,13 +32,13 @@ curl -fsSL https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/ins
 在 **PowerShell** 中执行：
 
 ```powershell
-irm https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/erub1t/oh-my-warp-palette/main/install.ps1 | iex
 ```
 
 只安装某个主题：
 
 ```powershell
-irm https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.ps1 -OutFile install.ps1
+irm https://raw.githubusercontent.com/erub1t/oh-my-warp-palette/main/install.ps1 -OutFile install.ps1
 .\install.ps1 github-dark
 ```
 
@@ -54,14 +54,14 @@ irm https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.ps
 ### macOS / Linux
 
 ```bash
-curl -fsSL -o /tmp/oh-my-warp-palette-install.sh https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.sh
+curl -fsSL -o /tmp/oh-my-warp-palette-install.sh https://raw.githubusercontent.com/erub1t/oh-my-warp-palette/main/install.sh
 bash /tmp/oh-my-warp-palette-install.sh --uninstall github-light
 ```
 
 ### Windows
 
 ```powershell
-irm https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.ps1 -OutFile install.ps1
+irm https://raw.githubusercontent.com/erub1t/oh-my-warp-palette/main/install.ps1 -OutFile install.ps1
 .\install.ps1 -Uninstall github-light
 ```
 
