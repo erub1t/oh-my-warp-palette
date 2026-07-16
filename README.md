@@ -7,7 +7,7 @@
 | 主题 | 描述 | 背景色 | 前景色 | 强调色 | 配置文件 |
 |------|------|--------|--------|--------|----------|
 | **April** | 清新的春日配色 | `#ffffff` | `#17703f` | `#5DA802` | [april.yaml](themes/april.yaml) |
-| **GitHub Light** | 基于 GitHub 官方浅色配色 | `#ffffff` | `#1f2328` | `#0969da` | [github-light.yaml](themes/github-light.yaml) |
+| **GitHub Light** | 基于 GitHub 官方浅色配色（Colorblind 版本） | `#ffffff` | `#1f2328` | `#0969da` | [github-light.yaml](themes/github-light.yaml) |
 | **GitHub Dark** | 基于 GitHub 官方深色配色 | `#0d1117` | `#c9d1d9` | `#58a6ff` | [github-dark.yaml](themes/github-dark.yaml) |
 | **GitHub Dark Dimmed** | GitHub 深色主题的柔和版本 | `#22272e` | `#adbac7` | `#539bf5` | [github-dark-dimmed.yaml](themes/github-dark-dimmed.yaml) |
 
