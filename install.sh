@@ -2,13 +2,18 @@
 
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [[ -n "${BASH_SOURCE[0]:-}" ]]; then
+  SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+else
+  SCRIPT_DIR="$(pwd)"
+fi
 LOCAL_THEMES_DIR="$SCRIPT_DIR/themes"
 WARP_THEMES_DIR="${WARP_THEMES_DIR:-$HOME/.warp/themes}"
 
-# Configure this after pushing your repo to GitHub.
+# Remote repository used when the script is executed via curl | bash.
 # Format: "github-username/repo-name"
-DEFAULT_REMOTE_REPO="your-username/oh-my-warp-palette"
+PLACEHOLDER_REPO="your-username/oh-my-warp-palette"
+DEFAULT_REMOTE_REPO="eruship/oh-my-warp-palette"
 REMOTE_REPO="${REMOTE_REPO:-$DEFAULT_REMOTE_REPO}"
 force_remote=false
 
@@ -53,11 +58,11 @@ Examples:
   $(basename "$0") -l                           # List available themes
   $(basename "$0") -u github-light              # Uninstall github-light
 
-Remote install (after setting DEFAULT_REMOTE_REPO and pushing to GitHub):
-  curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/oh-my-warp-palette/main/install.sh | bash
+Remote install (after pushing to GitHub):
+  curl -fsSL https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.sh | bash
 
 Remote install single theme:
-  curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/oh-my-warp-palette/main/install.sh | bash -s -- github-dark
+  curl -fsSL https://raw.githubusercontent.com/eruship/oh-my-warp-palette/main/install.sh | bash -s -- github-dark
 EOF
 }
 
@@ -70,7 +75,7 @@ is_remote_mode() {
 }
 
 check_remote_repo_configured() {
-  if [[ "$REMOTE_REPO" == "$DEFAULT_REMOTE_REPO" && "$DEFAULT_REMOTE_REPO" == "your-username/oh-my-warp-palette" ]]; then
+  if [[ "$DEFAULT_REMOTE_REPO" == "$PLACEHOLDER_REPO" ]]; then
     echo -e "${RED}Remote install is not configured yet.${NC}"
     echo "Please update DEFAULT_REMOTE_REPO at the top of install.sh, or set REMOTE_REPO."
     echo "Example: REMOTE_REPO=yourname/oh-my-warp-palette"
