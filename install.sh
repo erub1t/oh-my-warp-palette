@@ -43,7 +43,6 @@ Options:
   -a, --all       Install all available themes (default)
   -l, --list      List available themes
   -u, --uninstall Remove installed themes
-  -U, --update    Re-install / update themes
   -r, --remote    Force remote installation from GitHub
   -h, --help      Show this help message
 
@@ -94,7 +93,6 @@ list_themes() {
 
 install_local_theme() {
   local theme="$1"
-  local action="${2:-Installed}"
   local src="$LOCAL_THEMES_DIR/$theme.yaml"
   local dst="$WARP_THEMES_DIR/$theme.yaml"
 
@@ -104,12 +102,11 @@ install_local_theme() {
   fi
 
   cp "$src" "$dst"
-  echo -e "${GREEN}✓ $action: $theme${NC}"
+  echo -e "${GREEN}✓ Installed: $theme${NC}"
 }
 
 install_remote_theme() {
   local theme="$1"
-  local action="${2:-Installed}"
   local url="https://raw.githubusercontent.com/$REMOTE_REPO/main/themes/$theme.yaml"
   local dst="$WARP_THEMES_DIR/$theme.yaml"
 
@@ -118,7 +115,7 @@ install_remote_theme() {
     return 1
   fi
 
-  echo -e "${GREEN}✓ $action: $theme${NC}"
+  echo -e "${GREEN}✓ Installed: $theme${NC}"
 }
 
 uninstall_theme() {
@@ -135,8 +132,6 @@ uninstall_theme() {
 }
 
 install_themes() {
-  local action="${1:-Installed}"
-  shift
   local themes=("$@")
   local installed=0
 
@@ -152,13 +147,13 @@ install_themes() {
 
   for theme in "${themes[@]}"; do
     if is_remote_mode || [[ "$force_remote" == true ]]; then
-      install_remote_theme "$theme" "$action" && ((installed++)) || true
+      install_remote_theme "$theme" && ((installed++)) || true
     else
-      install_local_theme "$theme" "$action" && ((installed++)) || true
+      install_local_theme "$theme" && ((installed++)) || true
     fi
   done
 
-  echo -e "\n${BLUE}$action $installed theme(s) to $WARP_THEMES_DIR.${NC}"
+  echo -e "\n${BLUE}Installed $installed theme(s) to $WARP_THEMES_DIR.${NC}"
   echo -e "${BLUE}Open Warp → Settings → Appearance → Theme to select your theme.${NC}"
 }
 
@@ -195,10 +190,6 @@ main() {
         action="uninstall"
         shift
         ;;
-      -U|--update)
-        action="update"
-        shift
-        ;;
       -r|--remote)
         force_remote=true
         shift
@@ -223,7 +214,7 @@ main() {
     check_remote_repo_configured
   fi
 
-  if [[ ${#themes[@]} -eq 0 && ("$action" == "install" || "$action" == "update") ]]; then
+  if [[ ${#themes[@]} -eq 0 && "$action" == "install" ]]; then
     themes=("${BUILTIN_THEMES[@]}")
   fi
 
@@ -234,9 +225,7 @@ main() {
   fi
 
   if [[ "$action" == "install" ]]; then
-    install_themes "Installed" "${themes[@]}"
-  elif [[ "$action" == "update" ]]; then
-    install_themes "Updated" "${themes[@]}"
+    install_themes "${themes[@]}"
   else
     uninstall_themes "${themes[@]}"
   fi

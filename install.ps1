@@ -6,7 +6,6 @@ param(
 
     [switch]$List,
     [switch]$Uninstall,
-    [switch]$Update,
     [switch]$Help
 )
 
@@ -30,15 +29,12 @@ Install Warp themes to $WarpThemesDir.
 Options:
   -List        List available themes
   -Uninstall   Remove installed themes
-  -Update      Re-install / update themes
   -Help        Show this help message
 
 Examples:
   .\install.ps1                  # Install all themes
   .\install.ps1 github-dark      # Install only github-dark
   .\install.ps1 -List            # List available themes
-  .\install.ps1 -Update          # Update all themes
-  .\install.ps1 -Update github-dark      # Update github-dark
   .\install.ps1 -Uninstall github-light  # Uninstall github-light
 
 Remote install (PowerShell):
@@ -51,17 +47,14 @@ Remote install single theme:
 }
 
 function Install-Theme {
-    param(
-        [string]$Theme,
-        [string]$Action = "Installed"
-    )
+    param([string]$Theme)
 
     $url = "https://raw.githubusercontent.com/$Repo/$Branch/themes/$Theme.yaml"
     $dst = Join-Path $WarpThemesDir "$Theme.yaml"
 
     try {
         Invoke-WebRequest -Uri $url -OutFile $dst -UseBasicParsing -ErrorAction Stop
-        Write-Host "✓ $Action`: $Theme" -ForegroundColor Green
+        Write-Host "✓ Installed: $Theme" -ForegroundColor Green
     } catch {
         Write-Host "✗ Failed to download: $Theme" -ForegroundColor Red
     }
@@ -102,10 +95,6 @@ $targetThemes = if ($Themes.Count -eq 0) { $BuiltinThemes } else { $Themes }
 if ($Uninstall) {
     foreach ($theme in $targetThemes) {
         Uninstall-Theme -Theme $theme
-    }
-} elseif ($Update) {
-    foreach ($theme in $targetThemes) {
-        Install-Theme -Theme $theme -Action "Updated"
     }
 } else {
     foreach ($theme in $targetThemes) {
