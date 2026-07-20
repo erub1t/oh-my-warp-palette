@@ -35,6 +35,10 @@ NC='\033[0m'
 
 BUILTIN_THEMES=(
   april
+  atom-one-dark
+  atom-one-light
+  ayu
+  ayu-light
   cocoa-cream
   github-dark
   github-dark-dimmed

@@ -9,6 +9,10 @@
 | 主题 | 描述 | 背景色 | 前景色 | 强调色 | 配置文件 |
 |------|------|--------|--------|--------|----------|
 | **April** | 清新的春日配色 | `#ffffff` | `#17703f` | `#5DA802` | [april.yaml](themes/april.yaml) |
+| **Atom One Dark** | Atom 编辑器经典深色配色 | `#282c34` | `#abb2bf` | `#528bff` | [atom-one-dark.yaml](themes/atom-one-dark.yaml) |
+| **Atom One Light** | Atom 编辑器经典浅色配色 | `#fafafa` | `#383a42` | `#526fff` | [atom-one-light.yaml](themes/atom-one-light.yaml) |
+| **Ayu** | 基于 [ayutheme.com](https://ayutheme.com/) 官方配色（Dark 变体） | `#10141c` | `#bfbdb6` | `#e6b450` | [ayu.yaml](themes/ayu.yaml) |
+| **Ayu Light** | 基于 [ayutheme.com](https://ayutheme.com/) 官方配色（Light 变体） | `#fcfcfc` | `#5c6166` | `#f29718` | [ayu-light.yaml](themes/ayu-light.yaml) |
 | **Cocoa Cream** | 暖棕可可，柔和舒适的深色主题 | `#2b2624` | `#d6cfc8` | `#c8966d` | [cocoa-cream.yaml](themes/cocoa-cream.yaml) |
 | **GitHub Dark** | 基于 GitHub 官方深色配色 | `#0d1117` | `#c9d1d9` | `#58a6ff` | [github-dark.yaml](themes/github-dark.yaml) |
 | **GitHub Dark Dimmed** | GitHub 深色主题的柔和版本 | `#22272e` | `#adbac7` | `#539bf5` | [github-dark-dimmed.yaml](themes/github-dark-dimmed.yaml) |

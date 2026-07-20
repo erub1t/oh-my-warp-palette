@@ -21,6 +21,10 @@ if ($env:WARP_THEMES_DIR) {
 
 $BuiltinThemes = @(
     "april",
+    "atom-one-dark",
+    "atom-one-light",
+    "ayu",
+    "ayu-light",
     "cocoa-cream",
     "github-dark",
     "github-dark-dimmed",

@@ -8,6 +8,10 @@ const themeIcon = document.getElementById('themeIcon');
 
 const THEME_FILES = [
   'april.yaml',
+  'atom-one-dark.yaml',
+  'atom-one-light.yaml',
+  'ayu.yaml',
+  'ayu-light.yaml',
   'cocoa-cream.yaml',
   'github-dark.yaml',
   'github-dark-dimmed.yaml',
